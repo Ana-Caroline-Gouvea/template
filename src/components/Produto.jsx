@@ -1,10 +1,11 @@
-import { Card, CardActions, CardContent, CardMedia, Typography, Button, Link } from "@mui/material"
+import { Card, CardActions, CardContent, CardMedia, Typography, Button, Link, Grid } from "@mui/material"
 
 function Produto(props) {
   return (
-    <Card sx={{ maxWidth: 345 }} key={props.key}>
+    <Grid item lg={2.7} md={6} xs={12}>
+    <Card sx={{ minHeight: "1650px"}} key={props.key}>
         <CardMedia 
-            sx={{ height: 470 }}
+            sx={{ height: 480 }}
             image={props.imagem}
             title={props.titulo}
         />
@@ -28,6 +29,7 @@ function Produto(props) {
             </Button>
         </CardActions>
     </Card>
+    </Grid>
   )
 }
 
